@@ -1,0 +1,17 @@
+@use "../base/_typos"
+@use "../utils/_placeholder"
+  
+.hero
+  background-color: tomato
+  .main-title
+    @extend .title1
+    @extend .text-blue
+  p
+    @extend .text-paragraph
+    color: white
+  h2
+    @extend %title-h2
+
+  h3
+    @extend %title-h3
+

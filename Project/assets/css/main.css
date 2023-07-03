@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.flux {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-1 {
+  font-family: "Playfair Display", serif;
+  color: #0c6cf3;
+}
+
+.title-2 {
+  font-family: "Rubik", sans-serif;
+  color: #17294d;
+}
+
+.paragraph {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+}
+
+.header {
+  display: flex;
+  padding: 1.5rem 0;
+}
+.header:hover {
+  background-color: red;
+}
+.header__logo {
+  flex-shrink: 0;
+  margin-right: 3rem;
+  width: 10rem;
+}
+.header__navbar {
+  flex-flow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__list {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+  display: flex;
+}/*# sourceMappingURL=main.css.map */

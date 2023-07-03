@@ -1,0 +1,13 @@
+.result
+  border: solid 1px black
+  .message
+    font-style: italic
+    font-weight: bold
+
+    &_error
+      @extend .message
+      color: red
+    
+    &_success
+      @extend .message
+      color: green

@@ -1,0 +1,22 @@
+// Main sass est le fichier d'entrée de mon précompilateur
+// Ici on doit indiquer tous les fichiers qui sont nécessaires à la stylisation
+// en préfixant chaque fichier par _ on empêche le précompilateur de créer un fichier css pour chaque fichier il va seuelement s'occuper du main qui n'a pas d'_ et ensuite on relie les fichiers grace à l'@import
+// On range les imports par ordre d'importance du plus important au mois important 
+// Cependant si on doit déclarer des variables dans les imports il faurt qu'elles soient déclarées avant d'être utilisées donc cela modifie l'ordre des fichiers 
+
+// Utils
+// ici Utils passe devant Base car dans utils on définit les variables de couleurs qui vont être utilisées ensuite par Base donc on met toujours les utilitaires en premier
+// @import "utils/_variables" maintenant on n'utilise plus de déclarartion globale mais une déclaration pour chaque fichier avec use
+// Atoms
+@forward "atoms/_atom-avatar"
+@forward "atoms/_atom-title"
+
+// Base
+@import "base/_body"
+
+// Layout
+
+// Component
+@import "components/_component-paragraph"
+
+
