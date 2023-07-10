@@ -1,0 +1,13 @@
+@mixin blueDisc($diameter, $bg)
+  width: $diameter
+  height: $diameter
+  background-color: $bg
+
+@mixin responsive($min-width)
+  @media screen and (min-width: $min-width) 
+    @content
+
+@mixin phone
+  @media screen and (max-width: 500px) 
+    @content
+  

@@ -1,0 +1,22 @@
+// pour styliser chaque élément la méthode classique serait de faire:
+  // .error
+  //   background-color: red
+
+  // .success
+  //   background-color: green
+
+  // .warning
+  //   background-color: yellow
+
+// Boucle
+// pour les éléments css qui ont la class xx
+// il faut attriculer la propriété css assignée dans ma liste
+// si tableau avec uniquement des valeurs:
+// @each $maNouvelleVariable in $monTableauDeVariables
+// si tableau avec paire clé-valeur:
+// @each $cle $value in $monTableauDeVariable
+.each-loop
+  $types: ("error": red, "success": green, "warning": yellow, "waiting": grey)
+  @each $className, $color in $types
+    .#{$className}
+      color:$color

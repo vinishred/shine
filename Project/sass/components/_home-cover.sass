@@ -1,0 +1,61 @@
+@use "../utils/_utilsMain" as utils
+  
+.home-cover
+  background-color: utils.$blue-light
+
+  &__container
+    // display: flex
+    // align-items: flex-start
+    @include utils.flex(flex-start)
+    // ou on peut l'écrire
+    // + utils.flex(flex-start)
+
+  &__texts
+    flex-grow: 1
+    background-color: purple
+    padding-right: 5rem
+
+  &__title
+    @extend %title-1
+
+  &_paragraph
+    @extend %top-s
+
+  &_cta
+    background-color: red
+    padding-right: 7.5rem
+    margin-top: 2rem
+
+  &__medias
+    width: 50%
+    padding-left: 5rem
+    position: relative
+    flex-shrink: 0
+
+  &__image
+    width: 100%
+    height: auto
+
+  &__play
+    align-items: center
+    background-color: utils.$grey-dark
+    border-radius: 100%
+    display: flex
+    fill: white
+    height: 5rem
+    justify-content: center
+    position: absolute
+    width: 5rem
+    // pour centrer un élément en position absolute on fait
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+
+    // &::before
+    //   content: "je suis le before"
+
+    // &::after
+    //   content:"je suis l'after"
+
+    
+

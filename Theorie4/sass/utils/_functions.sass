@@ -1,0 +1,6 @@
+// 1rem = 16px
+
+@function pixelToRem($value)
+  // 16px = 1rem
+  // 32px = ??
+  @return #{ceil(calc($value * 1)/ 16)}rem

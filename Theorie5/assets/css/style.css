@@ -1,0 +1,96 @@
+.for-loop {
+  background-color: tomato;
+}
+.for-loop div:nth-child(1) {
+  margin-left: 10px;
+  background-color: #cc0000;
+}
+.for-loop div:nth-child(1)::before {
+  content: "1 -";
+  margin-right: 20px;
+}
+.for-loop div:nth-child(2) {
+  margin-left: 20px;
+  background-color: #990000;
+}
+.for-loop div:nth-child(2)::before {
+  content: "2 -";
+  margin-right: 20px;
+}
+.for-loop div:nth-child(3) {
+  margin-left: 30px;
+  background-color: #660000;
+}
+.for-loop div:nth-child(3)::before {
+  content: "3 -";
+  margin-right: 20px;
+}
+.for-loop div:nth-child(4) {
+  margin-left: 40px;
+  background-color: #330000;
+}
+.for-loop div:nth-child(4)::before {
+  content: "4 -";
+  margin-right: 20px;
+}
+.for-loop div:nth-child(5) {
+  margin-left: 50px;
+  background-color: black;
+}
+.for-loop div:nth-child(5)::before {
+  content: "5 -";
+  margin-right: 20px;
+}
+
+.each-loop .error {
+  color: red;
+}
+.each-loop .success {
+  color: green;
+}
+.each-loop .warning {
+  color: yellow;
+}
+.each-loop .waiting {
+  color: grey;
+}
+
+.conditions {
+  background-color: purple;
+}
+.conditions .circle {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.conditions .circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.conditions .rounded {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.conditions .rounded img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.conditions .square {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 0;
+}
+.conditions .square img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

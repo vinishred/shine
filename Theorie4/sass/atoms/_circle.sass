@@ -1,0 +1,23 @@
+@use "../utils/_mixins" as mixins
+  
+.circle
+  color: white
+  border-radius: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  @include mixins.blueDisc(250px, brown)
+  // on peut utiliser également le + à la place de @include c'est la même chose 
+  
+  +mixins.responsive(800px)
+    background-color: orange
+    color: black
+
+  @include mixins.responsive(1400px)
+    display: none
+
+  @include mixins.phone
+    background-color: black
+
+  
