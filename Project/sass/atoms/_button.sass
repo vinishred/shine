@@ -1,27 +1,44 @@
 @use "../utils/_utilsMain" as utils
 
+@mixin hover($color, $percent)
+  &:hover
+    background-color: darken($color, $percent)
+
+
 .button
-  border-radius: 1rem
-  padding: 0.5rem 1.5rem
+  border-radius: 1.5rem
+  padding: 0.5rem 1rem
   font-weight: 500
-  @extend %paragraph
-  display: flex
-  align-items: center
+  transition: 0.5s ease-in
+  @extend %paragraph-m
   @extend %top-xs
+  @include utils.flex(center)
 
   &:not(&--blue):hover
     color: utils.$blue
+
+  &__icon
+    fill: utils.$white
+    margin-left: 0.5rem
 
   &--blue
     @extend .button
     background-color: utils.$blue
     color: utils.$white
-    transition: 0.2s ease-in
+    fill: utils.$white
+    @include hover(utils.$blue, 10%)
+    // &:hover
+    //   // background-color: utils.$blue-dark
+    //   background-color: darken(utils.$blue, 10%)
+    //   // background-color: lighten(utils.$blue, 20%)
 
-    &:hover
-      // background-color: utils.$blue-dark
-      background-color: darken(utils.$blue, 10%)
-      // background-color: lighten(utils.$blue, 20%)
+  &--light-blue
+    @extend .button
+    background-color: utils.$blue-medium
+    color: utils.$blue
+    fill: utils.$blue
+    @include hover(utils.$blue-medium, 10%)
 
-    .button__icon
-      fill: utils.$white
+
+    // &:hover
+    //   background-color: darken(utils.$blue-medium, 10%)

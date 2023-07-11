@@ -1,5 +1,27 @@
 @mixin flex($justify: center, $align: $justify, $direction: "row")
   display: flex
-  justifify-content: $justify
+  justify-content: $justify
   align-items: $align
   flex-direction: $direction
+
+// $phone: 600px
+// $tablet: 900px
+// $small-laptop: 1200px
+
+@mixin responsive($device)
+
+  @if $device == "phone"
+    background-color: green
+    @media screen and (max-width: 600px) 
+      @content
+
+  @else if $device == "tablet"
+    @media screen and (max-width: 900px) 
+    background-color: yellow
+
+  @else if $device == "small-laptop"
+    @media screen and (max-width: 1200px) 
+    background-color: blue
+
+  @else 
+    @error "la device passé n'existe pas"
